@@ -19,10 +19,7 @@ jobs:
     - name: Generate key.properties
       env:
         KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
-      run: [
-      	printf "$KEY_PROPERTIES" > ./android/key.properties
-      	cat ./android/key.properties
-      ]
+      run: printf "$KEY_PROPERTIES" > ./android/key.properties
     
     - name: Setup Java
       uses: actions/setup-java@v1
