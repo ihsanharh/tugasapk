@@ -9,15 +9,14 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
-    #- name: Decrypt signing key
+    - name: Decrypt signing key
       env:
         RELEASE_KEYSTORE_SECRET: ${{ secrets.RELEASE_KEYSTORE_SECRET }}
         RELEASE_KEYSTORE: ${{ secrets.RELEASE_KEYSTORE }}
+        KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
       run: ./decrypt_key.sh > ./android/app/release-keystore.jks
     
     #- name: Generate key.properties
-      env:
-        KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
       run: printf "$KEY_PROPERTIES" > ./android/key.properties
     
     #- name: Setup Java
@@ -25,10 +24,10 @@ jobs:
       with:
         java-version: '12.x'
     
-    #- uses: subosito/flutter-action@v2
+    - uses: subosito/flutter-action@v2
       with:
         channel: 'stable'  
       run: flutter pub get
     
-    #- name: Build apk
-      run: flutter build apk --split-per-abi
+    - name: Build apk
+    - run: flutter build apk --split-per-abi
