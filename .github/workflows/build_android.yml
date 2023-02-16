@@ -3,6 +3,7 @@ on:
   push: 
     branch: 
       - master
+
 jobs:
   build:
     name: Build apk release
@@ -43,5 +44,4 @@ jobs:
       with: 
         artifacts: build/app/outputs/flutter-apk/*.apk
         token: ${{ secrets.RELEASE_TOKEN }}
-        commit: master
         tag: v0.0-alpha.${{ github.run_number }}
