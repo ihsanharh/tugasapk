@@ -20,7 +20,7 @@ jobs:
       env:
         KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
       run: [
-      	printf $KEY_PROPERTIES > ./android/key.properties
+      	printf "$KEY_PROPERTIES" > ./android/key.properties
       	cat ./android/key.properties
       ]
     
