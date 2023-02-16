@@ -14,10 +14,11 @@ jobs:
       env:
         RELEASE_KEYSTORE_SECRET: ${{ secrets.RELEASE_KEYSTORE_SECRET }}
         RELEASE_KEYSTORE: ${{ secrets.RELEASE_KEYSTORE }}
-        KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
-      run: ./decrypt_key.sh > ./android/app/release-keystore.jks
+      run: . decrypt_key.sh > ./android/app/release-keystore.jks
     
     - name: Generate key.properties
+      env:
+        KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
       run: printf "$KEY_PROPERTIES" > ./android/key.properties
     
     - name: Setup Java
