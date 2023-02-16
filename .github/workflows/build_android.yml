@@ -3,11 +3,11 @@ on:
     branch: 
       - master
 jobs:
-  build:
+  build-and-test:
     name: Build apk release
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     
     - name: Decrypt signing key
       env:
