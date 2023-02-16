@@ -4,10 +4,11 @@ on:
       - master
 jobs:
   build-and-test:
-    #name: Build apk release
+    name: Build apk release
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Actions/checkout
+      uses: actions/checkout@v3
     
     - name: Decrypt signing key
       env:
@@ -16,18 +17,19 @@ jobs:
         KEY_PROPERTIES: ${{ secrets.KEY_PROPERTIES }}
       run: ./decrypt_key.sh > ./android/app/release-keystore.jks
     
-    #- name: Generate key.properties
+    - name: Generate key.properties
       run: printf "$KEY_PROPERTIES" > ./android/key.properties
     
-    #- name: Setup Java
-    - uses: actions/setup-java@v1
+    - name: Setup Java
+      uses: actions/setup-java@v1
       with:
         java-version: '12.x'
     
-    - uses: subosito/flutter-action@v2
+    - name: init Flutter
+      uses: subosito/flutter-action@v2
       with:
         channel: 'stable'  
       run: flutter pub get
     
     - name: Build apk
-    - run: flutter build apk --split-per-abi
+      run: flutter build apk --split-per-abi
