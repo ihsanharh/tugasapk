@@ -3,7 +3,7 @@ on:
     branch: 
       - master
 jobs:
-  build-and-test:
+  build:
     name: Build apk release
     runs-on: ubuntu-latest
     steps:
