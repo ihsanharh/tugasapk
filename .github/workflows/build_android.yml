@@ -1,15 +1,15 @@
 name: GithubRelease
 on:
   push: 
-    branch: 
-      - master
+    branches: 
+      - "master"
 
 jobs:
   build:
     name: Build apk release
     runs-on: ubuntu-latest
     steps:
-    - name: run actions/checkout@v3
+    - name: Checkout repository
       uses: actions/checkout@v3
     
     - name: Decrypt signing key
