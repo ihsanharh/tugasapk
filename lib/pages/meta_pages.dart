@@ -8,7 +8,7 @@ List<Widget> pages = [
 ];
 
 List<Widget> pages_icon = [
-	Icon(Icons.home_rounded, size: 30),
-	Icon(Icons.calendar_month, size: 30),
-	Icon(Icons.settings, size: 30),
+	Icon(Icons.home_rounded, size: 60),
+	Icon(Icons.calendar_month, size: 60),
+	Icon(Icons.settings, size: 60),
 ];
