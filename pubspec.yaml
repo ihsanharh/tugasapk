@@ -9,6 +9,7 @@ environment:
   sdk: '>=2.18.4 <3.0.0'
 
 dependencies:
+  curved_navigation_bar: ^1.0.3 #latest version
   flutter:
     sdk: flutter
   english_words: ^4.0.0
