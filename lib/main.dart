@@ -40,28 +40,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+  	var screen = MediaQuery.of(context).size;
+  	
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Container(
-      	color: Colors.grey.shade100,
-        child: Center(
-          child: Column(
-          	mainAxisAlignment: MainAxisAlignment.center,
-          	children: <Widget>[
-            	Text(
-              	'$_currentPage',
-              	style: Theme.of(context).textTheme.headlineMedium,
-            	),
-          	],
-          ),
-        ),
+      body: Stack(
+      	children: <Widget>[
+      		Container(
+      			height: screen.height * .45,
+      			decoration: BoxDecoration(
+      				color: Colors.yellow,
+      			),
+      		),
+      		const Text(''),
+      	],
       ),
       bottomNavigationBar: CurvedNavigationBar(
       	items: <Widget>[
       		Icon(Icons.home_rounded, size: 30),
-      		Icon(Icons.perm_contact_calendar_rounded, size: 30),
+      		Icon(Icons.calendar_month, size: 30),
+      		Icon(Icons.settings, size: 30),
     		],
       	index: _currentPage,
       	backgroundColor: Colors.grey.shade100,
