@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:tugasapk/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,9 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'tugas pr',
-      theme: ThemeData.light(),
+      theme: lightThemeData(context),
       themeMode: ThemeMode.system,
-      darkTheme: ThemeData.dark(),
+      darkTheme: darkThemeData(context),
       home: const MyHomePage(title: 'Tugas PR'),
     );
   }
@@ -43,16 +44,16 @@ class _MyHomePageState extends State<MyHomePage> {
   	var screen = MediaQuery.of(context).size;
   	
     return Scaffold(
-      body: Stack(
-      	children: <Widget>[
-      		Container(
-      			height: screen.height * .45,
-      			decoration: BoxDecoration(
-      				color: Colors.yellow,
+      	body: Stack(
+      		children: <Widget>[
+      			Container(
+      				height: screen.height * .45,
+      				decoration: BoxDecoration(
+      					color: Colors.yellow,
+      				),
       			),
-      		),
-      		const Text(''),
-      	],
+      			Text('$_currentPage'),
+      		],
       ),
       bottomNavigationBar: CurvedNavigationBar(
       	items: <Widget>[
@@ -61,7 +62,6 @@ class _MyHomePageState extends State<MyHomePage> {
       		Icon(Icons.settings, size: 30),
     		],
       	index: _currentPage,
-      	backgroundColor: Colors.grey.shade100,
       	onTap: (index) {
     			_setPage(index);
     		},
