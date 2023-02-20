@@ -12,10 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'tugas pr',
-      theme: ThemeData(
-        primaryColor: Colors.yellow,
-      ),
-      themeMode: ThemeData.light(),
+      theme: ThemeData.light(),
+      themeMode: ThemeMode.system,
       darkTheme: ThemeData.dark(),
       home: const MyHomePage(title: 'Tugas PR'),
     );
