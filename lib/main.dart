@@ -46,12 +46,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       	body: Stack(
       		children: <Widget>[
-      			Container(
-      				height: screen.height * .45,
-      				decoration: BoxDecoration(
-      					color: Colors.green,
-      				),
-      			),
       			Text('$_currentPage'),
       		],
       ),
@@ -62,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
       		Icon(Icons.settings, size: 30),
     		],
       	index: _currentPage,
-      	color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+      	color: Colors.grey.shade900,
       	backgroundColor: Colors.transparent,
       	onTap: (index) {
     			_setPage(index);
