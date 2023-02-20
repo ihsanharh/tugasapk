@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,8 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'tugas pr',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.yellow,
       ),
+      themeMode: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
       home: const MyHomePage(title: 'Tugas PR'),
     );
   }
@@ -30,11 +32,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+  int _currentPage = 0;
 
-  void _incrementCounter() {
+  void _setPage(int pageIndex) {
     setState(() {
-      _counter++;
+      _currentPage = pageIndex;
     });
   }
 
@@ -50,35 +52,25 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
           	mainAxisAlignment: MainAxisAlignment.center,
           	children: <Widget>[
-            	const Text(
-              	'Kamu mencet tombolnya sebanyak:',
-            	),
             	Text(
-              	'$_counter',
+              	'$_currentPage',
               	style: Theme.of(context).textTheme.headlineMedium,
             	),
-            	const Text(
-            		' kali.'
-            	)
           	],
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
       bottomNavigationBar: CurvedNavigationBar(
-      	backgroundColor: Colors.grey.shade100,
       	items: <Widget>[
-      		Icon(Icons.add, size: 30),
-      		Icon(Icons.list, size: 30),
-      		Icon(Icons.compare_arrows, size: 30),
+      		Icon(Icons.home_rounded, size: 30),
+      		Icon(Icons.perm_contact_calendar_rounded, size: 30),
     		],
-    		onTap: (index) {
-      	//Handle button tap
+      	index: pageIndex,
+      	backgroundColor: Colors.grey.shade100,
+      	onTap: (index) {
+    			_setPage(pageIndex: index),
     		},
+      	animationDuration: 100,
   		),
     );
   }
