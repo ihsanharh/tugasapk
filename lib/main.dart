@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
       			Container(
       				height: screen.height * .45,
       				decoration: BoxDecoration(
-      					color: Colors.yellow,
+      					color: Colors.green,
       				),
       			),
       			Text('$_currentPage'),
@@ -62,6 +62,8 @@ class _MyHomePageState extends State<MyHomePage> {
       		Icon(Icons.settings, size: 30),
     		],
       	index: _currentPage,
+      	color: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+      	backgroundColor: Colors.transparent,
       	onTap: (index) {
     			_setPage(index);
     		},
