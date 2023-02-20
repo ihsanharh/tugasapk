@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'tugas pr',
       theme: ThemeData.light(),
       themeMode: ThemeMode.system,
-      home: const navigation(),
+      home: const MainNavigation(),
     );
   }
 }
