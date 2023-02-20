@@ -66,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
       	index: _currentPage,
       	backgroundColor: Colors.grey.shade100,
       	onTap: (index) {
-    			_setPage(pageIndex: index);
+    			_setPage(index);
     		},
       	animationDuration: Duration(milliseconds: 100),
   		),
