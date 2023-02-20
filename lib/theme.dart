@@ -11,7 +11,7 @@ ThemeData lightThemeData(BuildContext context) {
 	);
 }
 
-ThemeData DarkThemeData(BuildContext context) {
+ThemeData darkThemeData(BuildContext context) {
 	return ThemeData.dark().copyWith(
 		primaryColor: kPrimaryColor,
 		scaffoldBackgroundColor: Colors.black.shade300,
