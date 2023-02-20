@@ -14,9 +14,9 @@ ThemeData lightThemeData(BuildContext context) {
 ThemeData darkThemeData(BuildContext context) {
 	return ThemeData.dark().copyWith(
 		primaryColor: kPrimaryColor,
-		scaffoldBackgroundColor: Colors.black.shade300,
+		scaffoldBackgroundColor: Colors.grey.shade900,
 		bottomNavigationBarTheme: BottomNavigationBarThemeData(
-			backgroundColor: Colors.black.shade300,
+			backgroundColor: Colors.grey.shade900,
 		),
 	);
 }
