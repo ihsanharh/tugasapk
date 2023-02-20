@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
       		Icon(Icons.home_rounded, size: 30),
       		Icon(Icons.perm_contact_calendar_rounded, size: 30),
     		],
-      	index: pageIndex,
+      	index: _currentPage,
       	backgroundColor: Colors.grey.shade100,
       	onTap: (index) {
     			_setPage(index);
