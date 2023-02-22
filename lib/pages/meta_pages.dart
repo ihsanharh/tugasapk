@@ -9,7 +9,7 @@ List<Widget> pages = [
 	Settings(),
 ];
 
-List<Widget> pages_icon = [
+List<Widget> pages_icons = [
 	Icon(Icons.home_rounded, size: 30),
 	Icon(Icons.calendar_month, size: 30),
 	Icon(Icons.settings, size: 30),

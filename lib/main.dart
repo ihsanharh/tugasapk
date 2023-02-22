@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'tugas pr',
-      theme: ThemeData.light(),
+      theme: ThemeData.light().copyWith(
+      	primaryColor: Colors.lightBlue,
+      ),
       themeMode: ThemeMode.system,
       home: const MainNavigation(),
     );
