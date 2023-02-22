@@ -27,7 +27,7 @@ class _MainNavigationState extends State<MainNavigation> {
 				children: pages,
 			),
 			bottomNavigationBar: CurvedNavigationBar(
-      	items: pages_icon,
+      	items: pages_icon(_activePageIndex),
       	index: _activePageIndex,
       	color: Colors.grey.shade200,
       	backgroundColor: Colors.transparent,
