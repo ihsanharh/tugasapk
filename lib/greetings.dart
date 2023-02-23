@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-Object time_preference(String nama) {
-	List daftar_pesan = [
+Map<String, dynamic> time_preference(String nama) {
+	final List<Map<String, dynamic>> daftar_pesan = [
 		{
 			"pesan": "Selamat Pagi, $nama!",
 			"cloud_color": Colors.yellow,
@@ -10,8 +10,8 @@ Object time_preference(String nama) {
 		},
 		{
 			"pesan": "Selamat Siang, $nama!",
-			"cloud_color": Colors.lightBlue,
-			"accent_color": Colors.lightBlue,
+			"cloud_color": Colors.yellow,
+			"accent_color": Colors.yellow,
 		},
 		{
 			"pesan": "Selamat Sore, $nama!",
@@ -20,8 +20,8 @@ Object time_preference(String nama) {
 		},
 		{
 			"pesan": "Selamat Malam, $nama!",
-			"cloud_color": Colors.blue,
-			"accent_color": Colors.blue,
+			"cloud_color": Colors.yellow,
+			"accent_color": Colors.yellow,
 		},
 	];
 	List<List<int>> time = [
