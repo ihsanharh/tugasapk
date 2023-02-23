@@ -41,9 +41,11 @@ class _HomeState extends State<Home> {
 										style: const TextStyle(fontWeight: FontWeight.bold),
 									),
 									Text(
-										now.hour.toString(),
-										now.microsecondsSinceEpoch.toString(),
-									)
+										now.hour.toString()
+									),
+									Text(
+										now.microsecondsSinceEpoch.toString()
+									),
 								],
 							),
 						),
