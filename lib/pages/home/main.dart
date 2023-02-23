@@ -36,9 +36,12 @@ class _HomeState extends State<Home> {
 							child: Column(
 								crossAxisAlignment: CrossAxisAlignment.start,
 								children: <Widget>[
+									SizedBox(
+										height: screen_size.height * 0.05,
+									),
 									Text(
 										"Selamat Sore, Ihsan!",
-										style: const TextStyle(fontWeight: FontWeight.bold),
+										style: const TextStyle(fontWeight: FontWeight.w900),
 									),
 									Text(
 										now.hour.toString()
