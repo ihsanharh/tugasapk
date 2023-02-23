@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
 						decoration: BoxDecoration(
 							color: Colors.lightBlue,
 							image: DecorationImage(
-								alignment: Alignment.centerLeft
+								alignment: Alignment.centerLeft,
 								image: Image.asset(
 									"assets/images/cloud.png",
 									color: Colors.lightBlue,
