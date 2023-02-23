@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import '../../greetings.dart';
 
 class Home extends StatefulWidget {
 	const Home({super.key});
@@ -12,7 +13,7 @@ class _HomeState extends State<Home> {
 	@override
 	Widget build(BuildContext context) {
 		var screen_size = MediaQuery.of(context).size;
-		DateTime now = DateTime.now();
+		var time_now = time_preference("ihsan");
 		
 		return Scaffold(
 			body: Stack(
@@ -20,12 +21,12 @@ class _HomeState extends State<Home> {
 					Container(
 						height: screen_size.height * .45,
 						decoration: BoxDecoration(
-							color: Colors.lightBlue,
+							color: time_now.accent_color,
 							image: DecorationImage(
 								alignment: Alignment.centerLeft,
 								image: Image.asset(
 									"assets/images/cloud.png",
-									color: Colors.lightBlue,
+									color: time_now.cloud_color,
 								).image,
 							)
 						),
@@ -40,7 +41,7 @@ class _HomeState extends State<Home> {
 										height: screen_size.height * 0.05,
 									),
 									Text(
-										"Selamat Sore, Ihsan!",
+										time_now.pesan,
 										style: const TextStyle(fontWeight: FontWeight.w900),
 									),
 									Text(
