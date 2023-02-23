@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'tugas pr',
       theme: ThemeData.light().copyWith(
-      	primaryColor: Colors.lightBlue,
+      	primaryColor: Colors.lighBlue,
       ),
       themeMode: ThemeMode.system,
       home: const MainNavigation(),
