@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-List time_preference(String nama) {
+var time_preference(String nama) {
 	List daftar_pesan = [
 		{
 			"pesan": "Selamat Pagi, $nama!",
