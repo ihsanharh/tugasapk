@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Home extends StatefulWidget {
 	const Home({super.key});
@@ -11,12 +12,13 @@ class _HomeState extends State<Home> {
 	@override
 	Widget build(BuildContext context) {
 		var screen_size = MediaQuery.of(context).size;
+		DateTime now = DateTime.now();
 		
 		return Scaffold(
 			body: Stack(
 				children: <Widget>[
 					Container(
-						height: screen_size * .45,
+						height: screen_size.height * .45,
 						decoration: BoxDecoration(
 							color: Colors.lightBlue,
 							image: DecorationImage(
@@ -38,6 +40,10 @@ class _HomeState extends State<Home> {
 										"Selamat Sore, Ihsan!",
 										style: const TextStyle(fontWeight: FontWeight.bold),
 									),
+									Text(
+										now.hour.toString(),
+										now.microsecondsSinceEpoch.toString(),
+									)
 								],
 							),
 						),
