@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 List time_preference(String nama) {
@@ -30,7 +31,7 @@ List time_preference(String nama) {
 		[101, 15, 16, 17, 18],
 	];
 	DateTime now = DateTime.now();
-	int o;
+	int o = 0;
 	
 	for (int i = 0; i < time.length; i++) {
 		var filtered_hour = time[i].where((e) => e == now.hour);

@@ -44,12 +44,6 @@ class _HomeState extends State<Home> {
 										time_now.pesan,
 										style: const TextStyle(fontWeight: FontWeight.w900),
 									),
-									Text(
-										now.hour.toString()
-									),
-									Text(
-										now.microsecondsSinceEpoch.toString()
-									),
 								],
 							),
 						),
