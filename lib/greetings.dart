@@ -4,24 +4,24 @@ import 'package:intl/intl.dart';
 Map<String, dynamic> time_preference(String nama) {
 	final List<Map<String, dynamic>> daftar_pesan = [
 		{
+			"pesan": "Selamat Malam, $nama!",
+			"cloud_color": Colors.indigo.shade900,
+			"accent_color": Colors.indigo.shade900,
+		},
+		{
 			"pesan": "Selamat Pagi, $nama!",
-			"cloud_color": Colors.yellow,
-			"accent_color": Colors.yellow,
+			"cloud_color": Colors.yellow.shade300,
+			"accent_color": Colors.yellow.shade300,
 		},
 		{
 			"pesan": "Selamat Siang, $nama!",
-			"cloud_color": Colors.yellow,
-			"accent_color": Colors.yellow,
+			"cloud_color": Colors.lightBlue.shade300,
+			"accent_color": Colors.lightBlue.shade300,
 		},
 		{
 			"pesan": "Selamat Sore, $nama!",
-			"cloud_color": Colors.yellow,
-			"accent_color": Colors.yellow,
-		},
-		{
-			"pesan": "Selamat Malam, $nama!",
-			"cloud_color": Colors.yellow,
-			"accent_color": Colors.yellow,
+			"cloud_color": Colors.amber,
+			"accent_color": Colors.amber,
 		},
 	];
 	List<List<int>> time = [
