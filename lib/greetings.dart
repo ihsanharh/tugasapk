@@ -41,4 +41,4 @@ Map<String, dynamic> time_preference(String nama) {
 	}
 	
 	return daftar_pesan[o];
-};
+}

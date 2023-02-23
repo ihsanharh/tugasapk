@@ -21,12 +21,12 @@ class _HomeState extends State<Home> {
 					Container(
 						height: screen_size.height * .45,
 						decoration: BoxDecoration(
-							color: time_now.accent_color,
+							color: time_now["accent_color"],
 							image: DecorationImage(
 								alignment: Alignment.centerLeft,
 								image: Image.asset(
 									"assets/images/cloud.png",
-									color: time_now.cloud_color,
+									color: time_now["cloud_color"],
 								).image,
 							)
 						),
@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
 										height: screen_size.height * 0.05,
 									),
 									Text(
-										time_now.pesan,
+										time_now["pesan"],
 										style: const TextStyle(fontWeight: FontWeight.w900),
 									),
 								],
