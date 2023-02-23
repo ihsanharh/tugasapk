@@ -10,11 +10,39 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
 	@override
 	Widget build(BuildContext context) {
+		var screen_size = MediaQuery.of(context).size;
+		
 		return Scaffold(
-			body: Center(
-				child: Container(
-					child: Text('Hello, World!'),
-				),
+			body: Stack(
+				children: <Widget>[
+					Container(
+						height: screen_size * .45,
+						decoration: BoxDecoration(
+							color: Colors.lightBlue,
+							image: DecorationImage(
+								alignment: Alignment.centerLeft
+								image: Image.asset(
+									"assets/images/cloud.png",
+									color: Colors.lightBlue,
+								),
+							)
+						),
+					),
+					SafeArea(
+						child: Padding(
+							padding: EdgeInsets.symmetric(horizontal: 20),
+							child: Column(
+								crossAxisAlignment: CrossAxisAlignment.start,
+								children: <Widget>[
+									Text(
+										"Selamat Sore, Ihsan!",
+										style: const TextStyle(fontWeight: FontWeight.bold),
+									),
+								],
+							),
+						),
+					),
+				],
 			),
 		);
 	}
