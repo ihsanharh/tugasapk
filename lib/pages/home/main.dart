@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
 								image: Image.asset(
 									"assets/images/cloud.png",
 									color: Colors.lightBlue,
-								),
+								).image,
 							)
 						),
 					),
