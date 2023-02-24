@@ -5,22 +5,22 @@ Map<String, dynamic> time_preference(String nama) {
 	final List<Map<String, dynamic>> daftar_pesan = [
 		{
 			"pesan": "Selamat Malam, $nama!",
-			"cloud_color": Colors.indigo.shade900,
+			"cloud_color": Colors.white,
 			"accent_color": Colors.indigo.shade900,
 		},
 		{
 			"pesan": "Selamat Pagi, $nama!",
-			"cloud_color": Colors.yellow.shade300,
+			"cloud_color": Colors.black,
 			"accent_color": Colors.yellow.shade300,
 		},
 		{
 			"pesan": "Selamat Siang, $nama!",
-			"cloud_color": Colors.lightBlue.shade300,
+			"cloud_color": Colors.deepPurpleAccent.shade700,
 			"accent_color": Colors.lightBlue.shade300,
 		},
 		{
 			"pesan": "Selamat Sore, $nama!",
-			"cloud_color": Colors.amber,
+			"cloud_color": Colors.deepPurpleAccent.shade700,
 			"accent_color": Colors.amber,
 		},
 	];
@@ -36,8 +36,10 @@ Map<String, dynamic> time_preference(String nama) {
 	for (int i = 0; i < time.length; i++) {
 		var filtered_hour = time[i].where((e) => e == now.hour);
 		
-		if (filtered_hour.length >= 1) o = time[i][0] - 98;
-		break;
+		if (filtered_hour.length >= 1) {
+			o = time[i][0] - 98;
+			break;
+		}
 	}
 	
 	return daftar_pesan[o];
