@@ -28,20 +28,18 @@ jobs:
       with:
         java-version: '12.x'
     
-    - name: init Flutter
+    - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
         channel: 'stable'
       
-    - name: pub get dependencies
+    - name: Get project dependencies
       run: flutter pub get
     
     - name: Build apk
       run: flutter build apk --split-per-abi
     
-    - name: Create a release
-      uses: ncipollo/release-action@v1
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
       with: 
-        artifacts: build/app/outputs/flutter-apk/*.apk
-        token: ${{ secrets.RELEASE_TOKEN }}
-        tag: v0.0-alpha.${{ github.run_number }}
+        path: build/app/outputs/flutter-apk/*.apk
