@@ -40,14 +40,14 @@ jobs:
     - name: Build apk
       run: flutter build apk --split-per-abi
     
-   # - name: Remove previous release on draft
-    #  run: gh release delete -y draft
-     # env:
-      #  GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+    #- name: Remove previous release on draft
+     # run: gh release delete -y v${{ github.run_number }}
+      #env:
+       # GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
     
     - name: Create a new draft
       uses: ncipollo/release-action@v1
       with: 
         artifacts: build/app/outputs/flutter-apk/*.apk
         token: ${{ secrets.RELEASE_TOKEN }}
-        tag: v${{ github.run_number }}
+        tag: draft
