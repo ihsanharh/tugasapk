@@ -45,11 +45,11 @@ jobs:
      # env:
       #  GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
     
-    - name: Create a new release on draft
+    - name: Create a new draft
       uses: ncipollo/release-action@v1
       with: 
         allowUpdates: true
         artifacts: build/app/outputs/flutter-apk/*.apk
         token: ${{ secrets.RELEASE_TOKEN }}
-        tag: draft
+        tag: v${{ github.run_number }}
         draft: true
