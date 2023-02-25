@@ -51,4 +51,3 @@ jobs:
         artifacts: build/app/outputs/flutter-apk/*.apk
         token: ${{ secrets.RELEASE_TOKEN }}
         tag: v${{ github.run_number }}
-        draft: true
