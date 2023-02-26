@@ -14,11 +14,11 @@ class Navigation extends StatelessWidget {
 			resizeToAvoidBottomInset: false,
 			body: IndexedStack(
 				children: pages,
-				index: NavControl.currentIndex.value,
+				index: NavControl.currentIndex,
 			),
 			bottomNavigationBar: CurvedNavigationBar(
-      	items: pages_icon(NavControl.currentIndex.value),
-      	index: NavControl.currentIndex.value,
+      	items: pages_icon(NavControl.currentIndex),
+      	index: NavControl.currentIndex,
       	color: Colors.grey.shade200,
       	backgroundColor: Colors.transparent,
       	onTap: (index) {
