@@ -2,14 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import '../../greetings.dart';
 
-class Home extends StatefulWidget {
-	const Home({super.key});
-	
-	@override
-	State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
+class Home extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		var screen_size = MediaQuery.of(context).size;

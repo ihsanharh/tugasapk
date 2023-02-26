@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import './pages/navigation.dart';
+import 'package:get/get.dart';
+
+import './navigation/navigation.dart';
 
 void main() {
 	runApp(const MyApp());
@@ -10,11 +12,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'tugas pr',
-      theme: ThemeData.light(),
-      themeMode: ThemeMode.system,
-      home: const MainNavigation(),
+    return GetMaterialApp(
+      home: const Navigation(),
     );
   }
 }
