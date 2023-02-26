@@ -12,20 +12,20 @@ class Navigation extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return Scaffold(
 			resizeToAvoidBottomInset: false,
-			body: IndexedStack(
+			body: Obx(() => IndexedStack(
 				children: pages,
-				index: NavControl.currentIndex,
-			),
-			bottomNavigationBar: CurvedNavigationBar(
-      	items: pages_icon(NavControl.currentIndex),
-      	index: NavControl.currentIndex,
+				index: NavControl.currentIndex.value,
+			)),
+			bottomNavigationBar: Obx(() => CurvedNavigationBar(
+      	items: pages_icon(NavControl.currentIndex.value),
+      	index: NavControl.currentIndex.value,
       	color: Colors.grey.shade200,
       	backgroundColor: Colors.transparent,
       	onTap: (index) {
       		NavControl.changePage(index);
     		},
       	animationDuration: Duration(milliseconds: 100),
-  		),
+  		)),
 		);
 	}
 }
