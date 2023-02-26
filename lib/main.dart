@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import './navigation/navigation.dart';
+import 'Theme.dart';
 
 void main() {
 	runApp(const MyApp());
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       home: Navigation(),
+      themeMode: ThemeMode.system,
+      theme: TThemes.light,
+      darkTheme: TThemes.dark,
     );
   }
 }

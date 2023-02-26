@@ -19,7 +19,7 @@ class Navigation extends StatelessWidget {
 			bottomNavigationBar: Obx(() => CurvedNavigationBar(
       	items: pages_icon(NavControl.currentIndex.value),
       	index: NavControl.currentIndex.value,
-      	color: Colors.grey.shade200,
+      	color: Theme.of(context).navigationBarTheme.backgroundColor,
       	backgroundColor: Colors.transparent,
       	onTap: (index) {
       		NavControl.changePage(index);
