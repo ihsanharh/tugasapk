@@ -9,6 +9,7 @@ class TThemes {
 		bottomNavigationBarTheme: BottomNavigationBarThemeData(
 			backgroundColor: Colors.grey.shade200,
 			selectedItemColor: time_now['accent_color'],
+			unselectedItemColor: Colors.black,
 		),
 	);
 	
@@ -17,6 +18,7 @@ class TThemes {
 		bottomNavigationBarTheme: BottomNavigationBarThemeData(
 			backgroundColor: Colors.grey.shade900,
 			selectedItemColor: time_now['accent_color'],
+			unselectedItemColor: Colors.white,
 		),
 	);
 }

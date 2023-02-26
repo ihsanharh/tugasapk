@@ -17,7 +17,13 @@ class Navigation extends StatelessWidget {
 				index: NavControl.currentIndex.value,
 			)),
 			bottomNavigationBar: Obx(() => CurvedNavigationBar(
-      	items: pages_icon(NavControl.currentIndex.value),
+      	items: pages_icon.map(
+      		(i) => Icon(
+      			i['ic'],
+      			size: 30,
+      			color: i['i'] == NavControl.currentIndex.value ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor! : Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
+      		)
+      	).toList(),
       	index: NavControl.currentIndex.value,
       	color: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
       	backgroundColor: Colors.transparent,

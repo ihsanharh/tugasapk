@@ -9,10 +9,17 @@ List<Widget> pages = [
 	Settings(),
 ];
 
-List<Widget> pages_icon(int ActiveIndex) {
-	return <Widget>[
-		Icon(Icons.home_rounded, size: 30),//, color: (0 == ActiveIndex) ? Colors.blue : Colors.black),
-		Icon(Icons.calendar_month, size: 30),// color: (1 == ActiveIndex) ? Colors.blue : Colors.black),
-		Icon(Icons.settings, size: 30),//, color: (2 == ActiveIndex) ? Colors.blue : Colors.black),
-	];
-}
+List<Map<String, dynamic>> pages_icon = [
+	{
+		"i": 0,
+		"ic": Icons.home_rounded,
+	},
+	{
+		"i": 1,
+		"ic": Icons.calendar_month,
+	},
+	{
+		"i": 2,
+		"ic": Icons.settings,
+	},
+];
