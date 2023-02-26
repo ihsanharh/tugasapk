@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-Map<String, dynamic> time_preference([String user]) {
-	String nama = user ?? "John Doe";
+Map<String, dynamic> time_preference([String nama = "John Doe"]) {
 	final List<Map<String, dynamic>> daftar_pesan = [
 		{
 			"pesan": "Selamat Malam, $nama!",
