@@ -1,4 +1,4 @@
-import 'package:dart/state_management.dart';
+import 'package:get/state_manager.dart';
 
 class NavigationController extends GetxController {
 	int currentIndex = 0.obs;
