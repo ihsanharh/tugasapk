@@ -4,6 +4,6 @@ class NavigationController extends GetxController {
 	var currentIndex = 0.obs;
 	
 	void changePage(int pageIndex) {
-		currentIndex = pageIndex;
+		currentIndex.value = pageIndex;
 	}
 }
