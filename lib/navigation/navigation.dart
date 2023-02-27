@@ -21,7 +21,7 @@ class Navigation extends StatelessWidget {
       		(i) => Icon(
       			i['ic'],
       			size: 30,
-      			color: i['i'] == NavControl.currentIndex.value ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor! : Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
+      			color: i['i'] == NavControl.currentIndex.value ? Theme.of(context).bottomNavigationBarTheme.selectedItemColor! : Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
       		)
       	).toList(),
       	index: NavControl.currentIndex.value,

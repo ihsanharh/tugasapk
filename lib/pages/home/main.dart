@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+
 import '../../greetings.dart';
 
 class Home extends StatelessWidget {
@@ -35,7 +37,9 @@ class Home extends StatelessWidget {
 									),
 									Text(
 										time_now["pesan"],
-										style: const TextStyle(fontWeight: FontWeight.w900),
+										style: GoogleFonts.acme(
+											textStyle: const TextStyle(fontWeight: FontWeight.w900),
+										),
 									),
 								],
 							),
