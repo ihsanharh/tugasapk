@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Header extends StatelessWidget {
-	const Header({ required Key key, required this.size, required this.message, required this.color }) : super(key: key);
+	const Header({ required this.size, required this.message, required this.color });
 	
 	final Size size;
 	final String message;
