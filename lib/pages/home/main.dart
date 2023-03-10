@@ -38,7 +38,10 @@ class Home extends StatelessWidget {
 									Text(
 										time_now["pesan"],
 										style: GoogleFonts.acme(
-											textStyle: const TextStyle(fontWeight: FontWeight.w900),
+											textStyle: const TextStyle(
+												fontWeight: FontWeight.w900,
+												fontSize: 5.0
+											),
 										),
 									),
 								],
