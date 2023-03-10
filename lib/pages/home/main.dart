@@ -17,7 +17,7 @@ class Home extends StatelessWidget {
 					Header(size: screen_size, message: time_now['pesan'], color: time_now['accent_color'], cloud: time_now['cloud_color'])
 				]
 			),
-		)
+		);
 		
 		/*return Scaffold(
 			body: Stack(

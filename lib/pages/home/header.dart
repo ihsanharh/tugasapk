@@ -40,21 +40,19 @@ class Header extends StatelessWidget {
 					),
 					SafeArea(
 						child: Column(
-							child: Row(
-								children: <Widget>[
-									SizedBox(
-										height: size.height * 0.05,
-									),
-									Text(
-										message,
-										style: GoogleFonts.acme(
-											textStyle: Theme.of(context).textTheme.headline5?.copyWith(
-												fontWeight: FontWeight.bold
-											),
+							children: <Widget>[
+								SizedBox(
+									height: size.height * 0.05,
+								),
+								Text(
+									message,
+									style: GoogleFonts.acme(
+										textStyle: Theme.of(context).textTheme.headline5?.copyWith(
+											fontWeight: FontWeight.bold
 										),
 									),
-								],
-							)
+								),
+							],
 						),
 					),
 				],
