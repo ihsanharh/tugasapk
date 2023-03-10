@@ -5,6 +5,12 @@ import 'navigation/navigation.dart';
 import 'Theme.dart';
 
 void main() {
+	SystemChrome.setSystemUIOverlayStyle(
+		const SystemUiOverlayStyle(
+			systemNavigationBarColor: Colors.green,
+		),
+	);
+	
 	runApp(const MyApp());
 }
 
