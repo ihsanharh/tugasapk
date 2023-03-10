@@ -12,7 +12,7 @@ class Header extends StatelessWidget {
 		return Container(
 			margin: EdgeInsets.only(bottom: 20.0 * 2.5),
 			// It will cover 20% of our total height
-			height: size.height * 0.2,
+			height: size.height * 0.3,
 			child: Stack(
 				children: <Widget>[
 					Container(
@@ -24,22 +24,36 @@ class Header extends StatelessWidget {
 						height: size.height * 0.2 - 27,
 						decoration: BoxDecoration(
 							color: color,
+							image: DecorationImage(
+								alignment: Alignment.centerLeft,
+								image: Image.asset(
+									"assets/images/cloud.png",
+									color: time_now["cloud_color"],
+								).image,
+							),
 							borderRadius: BorderRadius.only(
 								bottomLeft: Radius.circular(36),
 								bottomRight: Radius.circular(36),
 							),
 						),
-						child: Row(
-							children: <Widget>[
-								Text(
-									message,
-									style: GoogleFonts.acme(
-										textStyle: Theme.of(context).textTheme.headline5?.copyWith(
-											fontWeight: FontWeight.bold
+					),
+					SafeArea(
+						child: Column(
+							child: Row(
+								children: <Widget>[
+									SizedBox(
+										height: size.height * 0.05,
+									),
+									Text(
+										message,
+										style: GoogleFonts.acme(
+											textStyle: Theme.of(context).textTheme.headline5?.copyWith(
+												fontWeight: FontWeight.bold
+											),
 										),
 									),
-								),
-							],
+								],
+							)
 						),
 					),
 				],
