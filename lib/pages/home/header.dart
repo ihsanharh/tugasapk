@@ -34,7 +34,7 @@ class Header extends StatelessWidget {
 								Text(
 									message,
 									style: GoogleFonts.acme(
-										textStyle: Theme.of(context).textTheme.headline5.copyWith(
+										textStyle: Theme.of(context).textTheme?.headline5.copyWith(
 											fontWeight: FontWeight.bold
 										),
 									),
