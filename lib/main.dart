@@ -8,7 +8,7 @@ import 'Theme.dart';
 void main() {
 	SystemChrome.setSystemUIOverlayStyle(
 		const SystemUiOverlayStyle(
-			systemNavigationBarColor: Colors.green,
+			systemNavigationBarColor: Colors.transparent,
 		),
 	);
 	
