@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
 
+import 'header.dart';
 import '../../greetings.dart';
 
 class Home extends StatelessWidget {
@@ -10,7 +9,16 @@ class Home extends StatelessWidget {
 		var screen_size = MediaQuery.of(context).size;
 		var time_now = time_preference("ihsan");
 		
-		return Scaffold(
+		return SingleChildScrollView(
+			child: Column(
+				crossAxisAlignment: CrossAxisAlignment.start,
+				children: <Widget>[
+					Header(size: screen_size, message: time_now['pesan'], color: time_now['accent_color'])
+				]
+			),
+		)
+		
+		/*return Scaffold(
 			body: Stack(
 				children: <Widget>[
 					Container(
@@ -50,6 +58,6 @@ class Home extends StatelessWidget {
 					),
 				],
 			),
-		);
+		);*/
 	}
 }
