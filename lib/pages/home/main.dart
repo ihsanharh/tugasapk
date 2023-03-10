@@ -40,7 +40,7 @@ class Home extends StatelessWidget {
 										style: GoogleFonts.acme(
 											textStyle: const TextStyle(
 												fontWeight: FontWeight.w900,
-												fontSize: 5.0
+												fontSize: 10
 											),
 										),
 									),
