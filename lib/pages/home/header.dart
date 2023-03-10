@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Header extends StatelessWidget {
-	const Header({ required this.size, required this.message, required this.color });
+	const Header({ required this.size, required this.message, required this.color, required this.cloud });
 	
 	final Size size;
 	final String message;
 	final Color color;
+	final Color cloud;
 	
 	Widget build(BuildContext context) {
 		return Container(
@@ -28,7 +29,7 @@ class Header extends StatelessWidget {
 								alignment: Alignment.centerLeft,
 								image: Image.asset(
 									"assets/images/cloud.png",
-									color: time_now["cloud_color"],
+									color: cloud,
 								).image,
 							),
 							borderRadius: BorderRadius.only(

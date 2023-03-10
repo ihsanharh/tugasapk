@@ -14,7 +14,7 @@ class Home extends StatelessWidget {
 			child: Column(
 				crossAxisAlignment: CrossAxisAlignment.start,
 				children: <Widget>[
-					Header(size: screen_size, message: time_now['pesan'], color: time_now['accent_color'])
+					Header(size: screen_size, message: time_now['pesan'], color: time_now['accent_color'], cloud: time_now['cloud_color'])
 				]
 			),
 		)
