@@ -43,6 +43,7 @@ class Navigation extends StatelessWidget {
       	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	currentIndex: NavControl.currentIndex.value,
       	backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
+      	borderRadius: Radius.circular(20.0),
       	onTap: (index) {
       		NavControl.changePage(index);
       	},
