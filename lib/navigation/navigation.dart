@@ -1,4 +1,5 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+//import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,11 +13,12 @@ class Navigation extends StatelessWidget {
 	Widget build(BuildContext context) {
 		return Scaffold(
 			resizeToAvoidBottomInset: false,
+			extendBody: true,
 			body: Obx(() => IndexedStack(
 				children: pages,
 				index: NavControl.currentIndex.value,
 			)),
-			bottomNavigationBar: Obx(() => CurvedNavigationBar(
+			/*bottomNavigationBar: Obx(() => CurvedNavigationBar(
       	items: pages_icon.map(
       		(i) => Icon(
       			i['ic'],
@@ -31,7 +33,21 @@ class Navigation extends StatelessWidget {
       		NavControl.changePage(index);
     		},
       	animationDuration: Duration(milliseconds: 100),
-  		)),
+      )),*/
+      bottomNavigationBar: Obx(() => CustomNavigationBar(
+      	items: pages_icon.map(
+      		(i) => CustomNavigationBarItem(
+      			icon: Icon(i['ic']),
+      		)
+      	).toList(),
+      	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
+      	currentIndex: NavControl.currentIndex.value,
+      	backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
+      	onTap: (index) {
+      		NavControl.changePage(index);
+      	},
+      	isFloating: true,
+      )),
 		);
 	}
 }
