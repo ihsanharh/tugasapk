@@ -3,6 +3,7 @@ import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'navigation_bar.dart';
 import 'navigation_controller.dart';
 import '../pages/meta_pages.dart';
 
@@ -50,7 +51,7 @@ class Navigation extends StatelessWidget {
       	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	unSelectedColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
       	currentIndex: NavControl.currentIndex.value,
-      	backgroundColor: Theme.of(context).bottomNavigationBarTheme.transparent,
+      	backgroundColor: Colors.transparent,
       	strokeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	items: pages_icon.map(
       		(i) => CustomNavigationBarItem(

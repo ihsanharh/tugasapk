@@ -17,10 +17,10 @@ List<Map<String, dynamic>> pages_icon = [
 	},
 	{
 		"i": 1,
-		"ic": Icons.calendar_outline,
+		"ic": Ionicons.calendar_outline,
 	},
 	{
 		"i": 2,
-		"ic": Icons.settings_outline,
+		"ic": Ionicons.settings_outline,
 	},
 ];
