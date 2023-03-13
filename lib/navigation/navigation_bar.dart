@@ -4,7 +4,7 @@ import '../pages/meta_pages.dart';
 
 class AnimatedBottomBar extends StatelessWidget {
 	final int currentIcon;
-	final List<IconModel> icons;
+	final List<Map<String, dynamic>> icons;
 	final ValueChanged<int>? onTap;
 	const AnimatedBottomBar({
 		Key? key,
