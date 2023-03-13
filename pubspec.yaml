@@ -13,6 +13,7 @@ dependencies:
   custom_navigation_bar: ^0.8.2
   flutter:
     sdk: flutter
+  flutter_font_icons: ^2.2.5
   get: ^4.6.5
   google_fonts: ^4.0.3
   intl: ^0.18.0

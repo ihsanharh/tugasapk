@@ -34,6 +34,14 @@ class Navigation extends StatelessWidget {
     		},
       	animationDuration: Duration(milliseconds: 100),
       )),*/
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: AnimatedBottomBar(
+      	currentIcon: NavControl.currentIndex.value,
+      	onTap: (index) {
+      		NavControl.changePage(index);
+      	},
+      	icons: pages_icon,
+      ),
       bottomNavigationBar: Obx(() => CustomNavigationBar(
       	elevation: 10,
       	iconSize: 30,
@@ -42,7 +50,7 @@ class Navigation extends StatelessWidget {
       	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	unSelectedColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
       	currentIndex: NavControl.currentIndex.value,
-      	backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
+      	backgroundColor: Theme.of(context).bottomNavigationBarTheme.transparent,
       	strokeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	items: pages_icon.map(
       		(i) => CustomNavigationBarItem(
