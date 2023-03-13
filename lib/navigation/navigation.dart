@@ -26,7 +26,7 @@ class Navigation extends StatelessWidget {
       	currentIndex: NavControl.currentIndex.value,
       	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	unSelectedColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
-      	backgroundColor: Theme.of(context).background!,
+      	backgroundColor: Theme.of(context).backgroundColor!,
       	strokeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	items: pages_icon.map(
       		(i) => CustomNavigationBarItem(
