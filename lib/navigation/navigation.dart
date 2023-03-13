@@ -17,15 +17,16 @@ class Navigation extends StatelessWidget {
 				children: pages,
 				index: NavControl.currentIndex.value,
 			)),
-      bottomNavigationBar: Obx(() => CustomNavigationBar(
+			floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Obx(() => CustomNavigationBar(
       	elevation: 10,
       	iconSize: 30,
       	isFloating: true,
-      	borderRadius: Radius.circular(20.0),
+      	borderRadius: Radius.circular(10),
+      	currentIndex: NavControl.currentIndex.value,
       	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	unSelectedColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
-      	currentIndex: NavControl.currentIndex.value,
-      	backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
+      	backgroundColor: Theme.of(context).background!,
       	strokeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	items: pages_icon.map(
       		(i) => CustomNavigationBarItem(
