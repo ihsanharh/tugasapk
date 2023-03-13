@@ -35,19 +35,23 @@ class Navigation extends StatelessWidget {
       	animationDuration: Duration(milliseconds: 100),
       )),*/
       bottomNavigationBar: Obx(() => CustomNavigationBar(
+      	elevation: 10,
+      	iconSize: 30,
+      	isFloating: true,
+      	borderRadius: Radius.circular(20.0),
+      	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
+      	unSelectedColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
+      	currentIndex: NavControl.currentIndex.value,
+      	backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
+      	strokeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	items: pages_icon.map(
       		(i) => CustomNavigationBarItem(
       			icon: Icon(i['ic']),
       		)
       	).toList(),
-      	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
-      	currentIndex: NavControl.currentIndex.value,
-      	backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor!,
-      	borderRadius: Radius.circular(20.0),
       	onTap: (index) {
       		NavControl.changePage(index);
       	},
-      	isFloating: true,
       )),
 		);
 	}
