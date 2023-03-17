@@ -17,8 +17,8 @@ List<IconData> pages_icon = [
 	Ionicons.settings_outline,
 ];
 
-List<IconData> pages_icon_a = [
+/*List<IconData> pages_icon_a = [
 	Ionicons.home,
 	Ionicons.grid,
 	Ionicons.settings,
-];
+];*/
