@@ -12,7 +12,7 @@ class Navigation extends StatelessWidget {
 	@override
 	Widget build(BuildContext context) {
 		SystemChrome.setSystemUIOverlayStyle(
-			const SystemUiOverlayStyle(
+			SystemUiOverlayStyle(
 				systemNavigationBarColor: Theme.of(context).scaffoldBackgroundColor!,
 			),
 		);
