@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_font_icons/flutter_font_icons.dart';
+import 'package:ionicons/ionicons.dart';
+
 import './home/main.dart';
 import './jadwal/main.dart';
 import './settings/main.dart';
@@ -10,17 +11,8 @@ List<Widget> pages = [
 	Settings(),
 ];
 
-List<Map<String, dynamic>> pages_icon = [
-	{
-		"i": 0,
-		"ic": Ionicons.home_outline,
-	},
-	{
-		"i": 1,
-		"ic": Ionicons.calendar_outline,
-	},
-	{
-		"i": 2,
-		"ic": Ionicons.settings_outline,
-	},
+List<IconData> pages_icon = [
+	Ionicons.home_outline,
+	Ionicons.calendar_outline,
+	Ionicons.settings_outline,
 ];

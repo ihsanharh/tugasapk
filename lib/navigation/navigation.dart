@@ -30,7 +30,7 @@ class Navigation extends StatelessWidget {
       	strokeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
       	items: pages_icon.map(
       		(i) => CustomNavigationBarItem(
-      			icon: Icon(i['ic']),
+      			icon: Icon(i),
       		)
       	).toList(),
       	onTap: (index) {
