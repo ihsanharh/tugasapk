@@ -24,10 +24,10 @@ class Navigation extends StatelessWidget {
       	isFloating: true,
       	borderRadius: Radius.circular(10),
       	currentIndex: NavControl.currentIndex.value,
-      	selectedColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
+      	selectedColor: Theme.of(context).primaryColor!,
       	unSelectedColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor!,
-      	backgroundColor: Theme.of(context).colorScheme.background!,
-      	strokeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor!,
+      	backgroundColor: Theme.of(context).scaffoldBackgroundColor!,
+      	strokeColor: Theme.of(context).primaryColor!,
       	items: pages_icon.map(
       		(i) => CustomNavigationBarItem(
       			icon: (pages_icon.indexOf(i) == NavControl.currentIndex.value)? Icon(pages_icon_a[pages_icon.indexOf(i)]): Icon(i),
