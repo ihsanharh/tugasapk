@@ -4,14 +4,14 @@ class ttheme {
 	static final light = ThemeData.light().copyWith(
 		colorScheme: ColorScheme.light(),
 		bottomNavigationBarTheme: BottomNavigationBarThemeData(
-			unselectedItemColor: Colors.black,
+			unselectedItemColor: Colors.grey.shade900,
 		),
 	);
 	
 	static final dark = ThemeData.dark().copyWith(
 		colorScheme: ColorScheme.dark(),
 		bottomNavigationBarTheme: BottomNavigationBarThemeData(
-			unselectedItemColor: Colors.white,
+			unselectedItemColor: Colors.grey.shade300,
 		),
 	);
 }

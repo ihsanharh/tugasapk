@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'navigation/navigation.dart';
 import 'theme.dart';
 
 void main() {
-	SystemChrome.setSystemUIOverlayStyle(
-		const SystemUiOverlayStyle(
-			systemNavigationBarColor: Colors.transparent,
-		),
-	);
-	
 	runApp(const MyApp());
 }
 
