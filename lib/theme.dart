@@ -3,7 +3,7 @@ import 'greetings.dart';
 
 var time_now = time_preference();
 
-class TThemes {
+class ttheme {
 	static final light = ThemeData.light().copyWith(
 		colorScheme: ColorScheme.light(),
 		bottomNavigationBarTheme: BottomNavigationBarThemeData(

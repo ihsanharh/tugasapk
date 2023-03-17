@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import 'navigation/navigation.dart';
-import 'Theme.dart';
+import 'theme.dart';
 
 void main() {
 	SystemChrome.setSystemUIOverlayStyle(
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       home: Navigation(),
-      theme: TThemes.light,
-      darkTheme: TThemes.dark,
+      theme: ttheme.light,
+      darkTheme: ttheme.dark,
       themeMode: ThemeMode.system,
     );
   }
