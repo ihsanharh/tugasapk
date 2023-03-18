@@ -29,8 +29,8 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
-    
+
 flutter_icons:
-	image_path: "assets/images/icon.png"
-	android: true
-	ios: true
+  image_path: assets/images/icon.png
+  android: true
+  ios: true
