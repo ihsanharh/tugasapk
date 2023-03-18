@@ -16,11 +16,11 @@ dependencies:
   google_fonts: ^4.0.3
   intl: ^0.18.0
   ionicons: ^0.2.2
-  provider: ^6.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.12.0
   flutter_lints: ^2.0.0
 
 flutter:
@@ -29,3 +29,8 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+    
+flutter_icons:
+	image_path: assets/images/icon.png
+	android: true
+	ios: true

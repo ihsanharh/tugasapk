@@ -37,6 +37,9 @@ jobs:
     - name: Get project dependencies
       run: flutter pub get
     
+    - name: Update app icon
+      run: flutter pub run flutter_launcher_icons
+    
     - name: Build apk
       run: flutter build apk --split-per-abi --obfuscate --split-debug-info=./lib
     

@@ -14,11 +14,5 @@ List<Widget> pages = [
 List<IconData> pages_icon = [
 	Ionicons.home_outline,
 	Ionicons.grid_outline,
-	Ionicons.settings_outline,
+	Ionicons.person_outline,
 ];
-
-/*List<IconData> pages_icon_a = [
-	Ionicons.home,
-	Ionicons.grid,
-	Ionicons.settings,
-];*/
